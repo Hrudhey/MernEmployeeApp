@@ -51,13 +51,13 @@ const Employee = () => {
         <TableHead>
           <TableRow>
             <TableCell style={{fontWeight:'bold'}}>EmployeeID</TableCell>
-            <TableCell style={{fontWeight:'bold'}} align="center">Name</TableCell>
-            <TableCell style={{fontWeight:'bold'}} align="center">Designation</TableCell>
-            <TableCell style={{fontWeight:'bold'}} align="center">Salary</TableCell>
-            <TableCell style={{fontWeight:'bold'}} align="center">Department</TableCell>
-            <TableCell style={{fontWeight:'bold'}} align="center">Location</TableCell>
+            <TableCell style={{fontWeight:'bold'}} align="left">Name</TableCell>
+            <TableCell style={{fontWeight:'bold'}} align="left">Designation</TableCell>
+            <TableCell style={{fontWeight:'bold'}} align="left">Salary</TableCell>
+            <TableCell style={{fontWeight:'bold'}} align="left">Department</TableCell>
+            <TableCell style={{fontWeight:'bold'}} align="left">Location</TableCell>
             {role === 'admin' && (
-            <TableCell style={{fontWeight:'bold'}} align="center">Actions</TableCell>
+            <TableCell style={{fontWeight:'bold'}} align="left">Actions</TableCell>
             )}
           </TableRow>
         </TableHead>
