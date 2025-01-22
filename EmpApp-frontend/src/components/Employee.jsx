@@ -76,7 +76,7 @@ const Employee = () => {
               <TableCell align="left">{row.Department}</TableCell>
               <TableCell align="left">{row.Location}</TableCell>
               {role === 'admin' && (
-                <TableCell align="left">
+                <TableCell align="center">
                   <Button size='small' color='secondary' variant='contained' value={row._id} onClick={(()=>{
                     update_emp(row);
                   })}>Edit</Button>&nbsp;
