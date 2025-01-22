@@ -57,7 +57,7 @@ const Employee = () => {
             <TableCell style={{fontWeight:'bold'}} align="left">Department</TableCell>
             <TableCell style={{fontWeight:'bold'}} align="left">Location</TableCell>
             {role === 'admin' && (
-            <TableCell style={{fontWeight:'bold'}} align="left">Actions</TableCell>
+            <TableCell style={{fontWeight:'bold'}} align="center">Actions</TableCell>
             )}
           </TableRow>
         </TableHead>
