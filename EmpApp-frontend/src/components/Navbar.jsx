@@ -7,7 +7,7 @@ const Navbar = () => {
 
     const navigate = useNavigate();
     const [role, setRole] = useState('');
-  //  const role = sessionStorage.getItem('role'); 
+  
 
   useEffect(()=>{
       const token = sessionStorage.getItem('logintoken');
