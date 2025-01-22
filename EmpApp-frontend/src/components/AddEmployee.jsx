@@ -21,7 +21,7 @@ const AddEmployee = () => {
         if(location.state!=null){
              axiosInstance.put('https://employee-app-backend-lqd3.onrender.com/employee/edit/'+location.state.val._id,form).then((res)=>{
                alert(res.data.message);
-               navigate('employees')
+               navigate('/employees')
              })
         }else{
          axiosInstance.post('https://employee-app-backend-lqd3.onrender.com/employee/addemp',form).then((res)=>{
