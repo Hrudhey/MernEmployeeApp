@@ -46,11 +46,7 @@ const Signup = () => {
           setForm({...form,Password:e.target.value})
         }}></TextField>
   </Grid>
-  <Grid size={{ xs: 6, md: 6 }}>
-  <TextField fullWidth label='role' variant='outlined'  name='role' onChange={(e)=>{
-          setForm({...form,role:e.target.value})
-        }}></TextField>
-  </Grid>
+ 
   <Grid size={{ xs: 12, md: 12 }} > 
   <Button variant='contained' color='warning' onClick={capValue}>Register</Button>
   </Grid>
