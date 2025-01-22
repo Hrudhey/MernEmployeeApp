@@ -57,7 +57,7 @@ const Employee = () => {
             <TableCell style={{fontWeight:'bold'}} align="right">Department</TableCell>
             <TableCell style={{fontWeight:'bold'}} align="right">Location</TableCell>
             {role === 'admin' && (
-            <TableCell style={{fontWeight:'bold'}} align="right">Actions</TableCell>
+            <TableCell style={{fontWeight:'bold'}} align="center">Actions</TableCell>
             )}
           </TableRow>
         </TableHead>
@@ -76,7 +76,7 @@ const Employee = () => {
               <TableCell align="right">{row.Department}</TableCell>
               <TableCell align="right">{row.Location}</TableCell>
               {role === 'admin' && (
-                <TableCell>
+                <TableCell align="right">
                   <Button size='small' color='secondary' variant='contained' value={row._id} onClick={(()=>{
                     update_emp(row);
                   })}>Edit</Button>&nbsp;

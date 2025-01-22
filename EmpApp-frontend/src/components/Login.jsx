@@ -6,7 +6,8 @@ import { Link, useNavigate } from 'react-router-dom'
 const Login = () => {
     const[form,setForm]=useState({
         Email:'',
-        Password:''
+        Password:'',
+        role:''
       }) 
 
       const [errors, setErrors] = useState({
@@ -82,6 +83,13 @@ const Login = () => {
         }} style={{marginLeft:'50px'}}  error={!!errors.Password}
         helperText={errors.Password}></TextField>
         </div>
+        <br />
+        <div>
+        <TextField label='role' variant='outlined' name='role' onChange={(e)=>{
+          setForm({...form,role:e.target.value})
+        }} style={{marginLeft:'50px'}}></TextField>
+        </div>
+
         
         <br></br>
         <Button color='secondary' variant='contained' onClick={capValue} style={{marginLeft:'110px'}}>Login</Button> <br />

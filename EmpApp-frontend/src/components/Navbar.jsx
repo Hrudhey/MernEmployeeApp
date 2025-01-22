@@ -1,11 +1,20 @@
 import { AppBar, Box, Button, Toolbar, Typography } from '@mui/material';
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import { Link, useNavigate } from 'react-router-dom';
+import { jwtDecode } from 'jwt-decode';
 
 const Navbar = () => {
 
     const navigate = useNavigate();
-    const role = sessionStorage.getItem('role'); 
+    const [role, setRole] = useState('');
+  //  const role = sessionStorage.getItem('role'); 
+
+  useEffect(()=>{
+      const token = sessionStorage.getItem('logintoken');
+           const decoded = token ? jwtDecode(token) : null;
+           setRole(decoded?.role); 
+
+  },[])
 
   function handleLogout(){
     // Clear the token
@@ -26,12 +35,7 @@ const Navbar = () => {
         </Typography>
      <Link to={'/employees'}> <Button style={{color:'white'}}>Employee</Button></Link>
      {role === 'admin' && (
-              <>
-                <Link to="/addemployee">
-                  <Button style={{ color: 'white' }}>Add Employee</Button>
-                </Link>
-              </>
-            )}
+     <Link to='/addemployee'><Button style={{ color: 'white' }}>Add Employee</Button></Link>)}
      <Link to={'/'}> <Button  style={{color:'white'}} onClick={handleLogout} >Logout</Button></Link>
       </Toolbar>
     </AppBar>
