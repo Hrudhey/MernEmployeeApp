@@ -33,6 +33,28 @@ const AddEmployee = () => {
            alert('Invalid Login');
           })
         }
+        useEffect(()=>{
+      if (location.state!=null) {                                  // to extract the data passed in the navigate we use a react hook called useLocation
+        setForm({...form,EmployeeID:location.state.val.EmployeeID,
+          Name:location.state.val.Name,
+          Designation:location.state.val.Designation,
+          Salary:location.state.val.Salary,
+          Department:location.state.val.Departent,
+          Location:location.state.val.Location,
+
+
+        })
+      } else {
+        setForm({...form,EmplyeeID:'',
+          Name:'',
+          Designation:'',
+          Salary:'',
+          Department:'',
+          Location:''
+      })
+    }
+   },[])
+          
         
        }
   return (
