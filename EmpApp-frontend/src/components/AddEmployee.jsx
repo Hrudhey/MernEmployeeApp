@@ -33,7 +33,8 @@ const AddEmployee = () => {
            alert('Invalid Login');
           })
         }
-        useEffect(()=>{
+     }
+    useEffect(()=>{
       if (location.state!=null) {                                  // to extract the data passed in the navigate we use a react hook called useLocation
         setForm({...form,EmployeeID:location.state.val.EmployeeID,
           Name:location.state.val.Name,
@@ -55,8 +56,6 @@ const AddEmployee = () => {
     }
    },[])
           
-        
-       }
   return (
     <div style={{margin:'8%'}}>
          <Grid container spacing={2}>
