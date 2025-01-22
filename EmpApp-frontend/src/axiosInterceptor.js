@@ -1,6 +1,6 @@
 import axios from "axios";
 const axiosInstance= axios.create({                          // to attach a token for every request we created this file
-    baseURL: 'http://localhost:3000'                    
+    baseURL: 'https://employee-app-backend-lqd3.onrender.com'                    
 })
 axiosInstance.interceptors.request.use((config)=>{
     const accessToken=sessionStorage.getItem('logintoken');    // saving the token to a variable
