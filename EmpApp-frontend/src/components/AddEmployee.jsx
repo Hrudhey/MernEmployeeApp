@@ -19,12 +19,12 @@ const AddEmployee = () => {
 
       function addEmployee(){
         if(location.state!=null){
-             axiosInstance.put('http://localhost:3000/employee/edit/'+location.state.val._id,form).then((res)=>{
+             axiosInstance.put('https://employee-app-backend-lqd3.onrender.com/employee/edit/'+location.state.val._id,form).then((res)=>{
                alert(res.data.message);
                navigate('employees')
              })
         }else{
-         axiosInstance.post('http://localhost:3000/employee/addemp',form).then((res)=>{
+         axiosInstance.post('https://employee-app-backend-lqd3.onrender.com/employee/addemp',form).then((res)=>{
            alert(res.data.message);
            navigate('/employees');
           
