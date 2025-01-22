@@ -51,11 +51,11 @@ const Employee = () => {
         <TableHead>
           <TableRow>
             <TableCell style={{fontWeight:'bold'}}>EmployeeID</TableCell>
-            <TableCell style={{fontWeight:'bold'}} align="right">Name</TableCell>
-            <TableCell style={{fontWeight:'bold'}} align="right">Designation</TableCell>
-            <TableCell style={{fontWeight:'bold'}} align="right">Salary</TableCell>
-            <TableCell style={{fontWeight:'bold'}} align="right">Department</TableCell>
-            <TableCell style={{fontWeight:'bold'}} align="right">Location</TableCell>
+            <TableCell style={{fontWeight:'bold'}} align="center">Name</TableCell>
+            <TableCell style={{fontWeight:'bold'}} align="center">Designation</TableCell>
+            <TableCell style={{fontWeight:'bold'}} align="center">Salary</TableCell>
+            <TableCell style={{fontWeight:'bold'}} align="center">Department</TableCell>
+            <TableCell style={{fontWeight:'bold'}} align="center">Location</TableCell>
             {role === 'admin' && (
             <TableCell style={{fontWeight:'bold'}} align="center">Actions</TableCell>
             )}
@@ -70,13 +70,13 @@ const Employee = () => {
               <TableCell component="th" scope="row">
                 {row.EmployeeID}
               </TableCell>
-              <TableCell align="right">{row.Name}</TableCell>
-              <TableCell align="right">{row.Designation}</TableCell>
-              <TableCell align="right">{row.Salary}</TableCell>
-              <TableCell align="right">{row.Department}</TableCell>
-              <TableCell align="right">{row.Location}</TableCell>
+              <TableCell align="left">{row.Name}</TableCell>
+              <TableCell align="left">{row.Designation}</TableCell>
+              <TableCell align="left">{row.Salary}</TableCell>
+              <TableCell align="left">{row.Department}</TableCell>
+              <TableCell align="left">{row.Location}</TableCell>
               {role === 'admin' && (
-                <TableCell align="center">
+                <TableCell align="left">
                   <Button size='small' color='secondary' variant='contained' value={row._id} onClick={(()=>{
                     update_emp(row);
                   })}>Edit</Button>&nbsp;
