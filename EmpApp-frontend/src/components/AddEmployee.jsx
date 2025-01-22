@@ -40,13 +40,13 @@ const AddEmployee = () => {
           Name:location.state.val.Name,
           Designation:location.state.val.Designation,
           Salary:location.state.val.Salary,
-          Department:location.state.val.Departent,
+          Department:location.state.val.Department,
           Location:location.state.val.Location,
 
 
         })
       } else {
-        setForm({...form,EmplyeeID:'',
+        setForm({...form,EmployeeID:'',
           Name:'',
           Designation:'',
           Salary:'',
