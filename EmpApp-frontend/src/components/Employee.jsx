@@ -13,7 +13,7 @@ const Employee = () => {
    
   
      useEffect(()=>{
-      axiosInstance.get('http://localhost:3000/employee/')
+      axiosInstance.get('https://employee-app-backend-lqd3.onrender.com/employee/')
       .then((res) => {
         setData(res.data);
       })
@@ -35,7 +35,7 @@ const Employee = () => {
        }
 
     function delete_emp(id){
-      axiosInstance.delete(`http://localhost:3000/employee/delete/${id}`).then((res) =>{
+      axiosInstance.delete(`https://employee-app-backend-lqd3.onrender.com/employee/delete/${id}`).then((res) =>{
         alert(res.data.message);
         setData((prevData) =>prevData.filter((employee)=> employee._id !== id));
       }).catch((err)=>{
