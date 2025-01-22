@@ -83,12 +83,8 @@ const Login = () => {
         }} style={{marginLeft:'50px'}}  error={!!errors.Password}
         helperText={errors.Password}></TextField>
         </div>
-        <br />
-        <div>
-        <TextField label='role' variant='outlined' name='role' onChange={(e)=>{
-          setForm({...form,role:e.target.value})
-        }} style={{marginLeft:'50px'}}></TextField>
-        </div>
+        
+       
 
         
         <br></br>
