@@ -39,7 +39,7 @@ const Login = () => {
 
       function capValue(){
         if(validateForm()){
-       axios.post('http://localhost:3000/user/login',form).then((res)=>{
+       axios.post('https://employee-app-backend-lqd3.onrender.com/user/login',form).then((res)=>{
          alert(res.data.message);
          if(res.data.key){
            sessionStorage.setItem('logintoken',res.data.key);   // to save the data and token
