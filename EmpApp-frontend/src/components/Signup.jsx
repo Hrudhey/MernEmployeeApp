@@ -9,7 +9,8 @@ const Signup = () => {
     const[form,setForm]=useState({
         Name:'',  
         Email:'',
-        Password:''
+        Password:'',
+        role:''
         
         }) 
          const navigate=useNavigate();
