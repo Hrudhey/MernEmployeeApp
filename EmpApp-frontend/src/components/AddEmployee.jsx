@@ -35,7 +35,7 @@ const AddEmployee = () => {
         }
      }
     useEffect(()=>{
-      if (location.state!=null) {                                  // to extract the data passed in the navigate we use a react hook called useLocation
+      if (location.state!=null) {                           
         setForm({...form,EmployeeID:location.state.val.EmployeeID,
           Name:location.state.val.Name,
           Designation:location.state.val.Designation,
